@@ -121,3 +121,21 @@ fi
 unset __conda_bin
 
 [[ $TERM == xterm-kitty ]] && alias ssh='kitty +kitten ssh'
+
+# Fast directory navigation and per-project environments.
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init zsh --cmd cd)"
+fi
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook zsh)"
+fi
+
+# Start or reattach to a named terminal workspace with `t project-name`.
+function t {
+  if (( ! $+commands[tmux] )); then
+    print -u2 'tmux is not installed.'
+    return 127
+  fi
+  local session="${1:-main}"
+  tmux new-session -A -s "$session"
+}
