@@ -68,6 +68,50 @@
     VISUAL = "nvim";
   };
 
+  programs.tmux = {
+    enable = true;
+    prefix = "C-a";
+    baseIndex = 1;
+    escapeTime = 0;
+    historyLimit = 100000;
+    keyMode = "vi";
+    mouse = true;
+    terminal = "tmux-256color";
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+      yank
+      resurrect
+      continuum
+    ];
+    extraConfig = ''
+      set -g renumber-windows on
+      set -g set-clipboard on
+      set -ag terminal-overrides ',xterm-kitty:RGB'
+
+      # New panes and windows stay in the current working directory.
+      bind c new-window -c '#{pane_current_path}'
+      bind '|' split-window -h -c '#{pane_current_path}'
+      bind '-' split-window -v -c '#{pane_current_path}'
+
+      # Vim-style pane movement without needing the prefix repeatedly.
+      bind -r h select-pane -L
+      bind -r j select-pane -D
+      bind -r k select-pane -U
+      bind -r l select-pane -R
+
+      # Silver Wolf-inspired status line.
+      set -g status-position bottom
+      set -g status-style 'bg=#11111b,fg=#cdd6f4'
+      set -g status-left '#[bg=#89b4fa,fg=#11111b,bold]  #S  '
+      set -g status-right '#[fg=#cba6f7]#H #[fg=#89b4fa]%Y-%m-%d %H:%M '
+      set -g window-status-current-format '#[bg=#cba6f7,fg=#11111b,bold] #I:#W '
+
+      set -g @resurrect-capture-pane-contents 'on'
+      set -g @continuum-restore 'on'
+      set -g @continuum-save-interval '15'
+    '';
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
