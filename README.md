@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/assets/silver-wolf-banner.png" alt="Silver Wolf inspired cyberpunk dotfiles banner" width="100%" />
+  <img src=".github/assets/silver-wolf-wallpaper.jpg" alt="Silver Wolf desktop wallpaper" width="100%" />
 
   <h1>「 SILVER WOLF // DOTFILES 」</h1>
 
@@ -121,5 +121,5 @@ keyring, or ignored environment file—never directly in these configs.
 ---
 
 <div align="center">
-  <sub>Original AI-generated fan-art banner inspired by Silver Wolf and used as repository artwork. Honkai: Star Rail and Silver Wolf are properties of HoYoverse.</sub>
+  <sub>Repository banner uses the same Silver Wolf artwork as the active desktop wallpaper. Honkai: Star Rail and Silver Wolf are properties of HoYoverse.</sub>
 </div>
