@@ -51,9 +51,6 @@
 !/.config/Code/User/snippets/
 !/.config/Code/User/snippets/**
 
-# Neovim intentionally remains its own repository.
-/.config/nvim/
-
 !/.local/
 /.local/*
 !/.local/bin/

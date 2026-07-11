@@ -21,7 +21,7 @@ git --git-dir="$HOME/dotfiles" --work-tree="$HOME" config status.showUntrackedFi
 ```
 
 The ignore policy is deny-by-default. Code history, logs, cookies, databases,
-caches and authentication state must never be added. Neovim remains a separate
-repository under `~/.config/nvim`.
+caches and authentication state must never be added. Neovim is linked as a Git
+submodule under `~/.config/nvim`.
 
 Run `~/.local/bin/dotfiles-check` after changing configuration.
