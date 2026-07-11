@@ -4,6 +4,7 @@
 
 !/.gitignore
 !/DOTFILES.md
+!/README.md
 !/.zshrc
 !/.zshenv
 !/.bashrc
@@ -11,6 +12,11 @@
 !/.profile
 !/.gitconfig
 !/.p10k.zsh
+
+!/.github/
+/.github/*
+!/.github/assets/
+!/.github/assets/silver-wolf-banner.png
 
 !/.config/
 /.config/*
