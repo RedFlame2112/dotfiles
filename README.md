@@ -36,7 +36,7 @@ I themed this after Silver Wolf from Honkai: Star rail, who is my favorite chara
   and machine state stay out of the repository.
 - A modern Neovim environment with native LSP, completion, Treesitter, DAP,
   Conform formatting, Flash navigation, TODO navigation, and Codex workflows.
-- Silver Wolf–styled Hyprland, Rofi, Dunst, Kitty, Fastfetch, and Waybar themes.
+- Styled Hyprland, Rofi, Dunst, Kitty, Fastfetch, and Waybar themes.
 - Deduplicated shell PATH with conditional initialization for Nix, pyenv, Conda,
   opam, Cargo, and project tooling.
 - Home Manager packages and utility scripts, including curated configuration
