@@ -1,9 +1,9 @@
 <div align="center">
   <img src=".github/assets/silver-wolf-wallpaper.jpg" alt="Silver Wolf desktop wallpaper" width="100%" />
 
-  <h1>「 SILVER WOLF // DOTFILES 」</h1>
+  <h1>「 DOTFILES 」</h1>
 
-  <p><em>Reality is just another game. These configs are the custom settings.</em></p>
+  <p><em>Reality is just another game.</em></p>
 
   [![Arch Linux](https://img.shields.io/badge/Arch_Linux-0b1020?style=for-the-badge&logo=archlinux&logoColor=58c7f3)](https://archlinux.org/)
   [![Hyprland](https://img.shields.io/badge/Hyprland-151028?style=for-the-badge&logo=wayland&logoColor=cba6f7)](https://hypr.land/)
@@ -15,9 +15,8 @@
 
 ## SYSTEM_LOADOUT
 
-A personal Arch Linux and Hyprland environment built around a dark Silver Wolf
-palette: deep navy surfaces, violet holographic accents, cyan highlights, and a
-small amount of controlled chaos.
+My personal Arch Linux and Hyprland environment. 
+I themed this after Silver Wolf from Honkai: Star rail, who is my favorite character!
 
 | Component | Configuration |
 | --- | --- |
@@ -87,7 +86,7 @@ dots commit -m "Update Neovim submodule"
 dots push
 ```
 
-Run the available configuration checks with:
+Run available configuration checks with:
 
 ```bash
 dotfiles-check
