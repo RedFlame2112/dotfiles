@@ -1,0 +1,61 @@
+# This repository uses $HOME as its work tree. Ignore everything by default and
+# opt hand-authored configuration in explicitly.
+*
+
+!/.gitignore
+!/DOTFILES.md
+!/.zshrc
+!/.zshenv
+!/.bashrc
+!/.bash_profile
+!/.profile
+!/.gitconfig
+!/.p10k.zsh
+
+!/.config/
+/.config/*
+!/.config/home-manager/
+!/.config/home-manager/**
+/.config/home-manager/result
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/kitty/
+!/.config/kitty/**
+!/.config/waybar/
+!/.config/waybar/**
+!/.config/dunst/
+!/.config/dunst/**
+!/.config/rofi/
+!/.config/rofi/**
+!/.config/swaylock/
+!/.config/swaylock/**
+!/.config/fastfetch/
+!/.config/fastfetch/**
+
+# Curate editor preferences; never track Electron state, history, logs,
+# databases, cookies, authentication data, or machine identifiers.
+!/.config/Code\ -\ OSS/
+/.config/Code\ -\ OSS/*
+!/.config/Code\ -\ OSS/User/
+/.config/Code\ -\ OSS/User/*
+!/.config/Code\ -\ OSS/User/settings.json
+!/.config/Code\ -\ OSS/User/keybindings.json
+!/.config/Code\ -\ OSS/User/snippets/
+!/.config/Code\ -\ OSS/User/snippets/**
+!/.config/Code/
+/.config/Code/*
+!/.config/Code/User/
+/.config/Code/User/*
+!/.config/Code/User/settings.json
+!/.config/Code/User/keybindings.json
+!/.config/Code/User/snippets/
+!/.config/Code/User/snippets/**
+
+# Neovim intentionally remains its own repository.
+/.config/nvim/
+
+!/.local/
+/.local/*
+!/.local/bin/
+/.local/bin/*
+!/.local/bin/dotfiles-check
