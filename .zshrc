@@ -15,9 +15,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 # Oh My Zsh and Powerlevel10k.
 ZSH=/usr/share/oh-my-zsh
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
 source "$ZSH/oh-my-zsh.sh"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Ask pacman which package provides an unknown executable.
 function command_not_found_handler {
