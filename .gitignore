@@ -20,6 +20,9 @@
 
 !/.config/
 /.config/*
+!/.config/suture/
+/.config/suture/*
+!/.config/suture/packages.toml
 !/.config/home-manager/
 !/.config/home-manager/**
 /.config/home-manager/result
