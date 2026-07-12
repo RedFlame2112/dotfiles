@@ -35,7 +35,8 @@ with pkgs;
   shfmt
 
   # Development tools
-  neovim
+  # Neovim is provided by pacman so its runtime stays aligned with this
+  # Arch-focused configuration; do not shadow it with the Nix profile copy.
   git
   go
 

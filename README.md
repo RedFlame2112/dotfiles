@@ -65,6 +65,36 @@ exec zsh
 If checkout reports conflicting files, back them up first and retry. The
 repository intentionally does not automate destructive replacement.
 
+## SUTURE_BOOTSTRAP // ARCH LINUX
+
+Suture is the emerging repeatable setup path for this configuration. After the
+base checkout above, it reads the tracked package manifest and presents an Arch
+package plan before installing anything. It is Arch-only for now; NixOS support
+will be added separately.
+
+> [!NOTE]
+> Suture is currently a private companion repository. This path is available to
+> collaborators with access; it will become a fully public bootstrap once the
+> Suture release repository is published. The command below deliberately pins a
+> tested release instead of installing an unreviewed development branch.
+
+```bash
+sudo pacman -S --needed git go base-devel
+
+go install github.com/RedFlame2112/suture/cmd/suture@v0.5.0
+export PATH="$(go env GOPATH)/bin:$PATH"
+
+suture doctor
+suture plan
+suture bootstrap
+```
+
+`suture bootstrap` currently validates the local toolchain and applies the
+package manifest, prompting for confirmation. It does not use `--prune`, so it
+will not remove unmanaged packages. Review the plan carefully: AUR packages
+run user-submitted build scripts through `paru` or `yay`. The bare checkout and
+Home Manager activation remain manual steps until the installer workflow lands.
+
 ## COMMAND_DECK
 
 The `dots` alias targets the bare repository while leaving `$HOME` as the live
